@@ -1,8 +1,7 @@
 require './lib/artist.rb'
 
 class Song 
-  attr_accessor :name
-  attr_reader :artist
+  attr_accessor :name, :artist
   
   @@all = []
   
@@ -15,9 +14,9 @@ class Song
     @@all
   end
   
-  def artist=(artist_arg)
-    @artist = artist_arg
-  end
+  # def artist=(artist_arg)
+  #   @artist = artist_arg
+  # end
   
   def self.new_by_filename(filename)
     new_name = filename.split(" - ")[1]
